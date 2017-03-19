@@ -1,0 +1,1168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NFineBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Sys_Area">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+          <Property Name="F_Layers" Type="int" />
+          <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+          <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+          <Property Name="F_SimpleSpelling" Type="varchar" MaxLength="50" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sys_DbBackup">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_BackupType" Type="varchar" MaxLength="50" />
+          <Property Name="F_DbName" Type="varchar" MaxLength="50" />
+          <Property Name="F_FileName" Type="varchar" MaxLength="50" />
+          <Property Name="F_FileSize" Type="varchar" MaxLength="50" />
+          <Property Name="F_FilePath" Type="varchar" MaxLength="500" />
+          <Property Name="F_BackupTime" Type="datetime" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Sys_FilterIP">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_Type" Type="bit" />
+          <Property Name="F_StartIP" Type="varchar" MaxLength="50" />
+          <Property Name="F_EndIP" Type="varchar" MaxLength="50" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Sys_Items">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+          <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+          <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+          <Property Name="F_IsTree" Type="bit" />
+          <Property Name="F_Layers" Type="int" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sys_ItemsDetail">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_ItemId" Type="varchar" MaxLength="50" />
+          <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+          <Property Name="F_ItemCode" Type="varchar" MaxLength="50" />
+          <Property Name="F_ItemName" Type="varchar" MaxLength="50" />
+          <Property Name="F_SimpleSpelling" Type="varchar" MaxLength="500" />
+          <Property Name="F_IsDefault" Type="bit" />
+          <Property Name="F_Layers" Type="int" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sys_Log">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_Date" Type="datetime" />
+          <Property Name="F_Account" Type="varchar" MaxLength="50" />
+          <Property Name="F_NickName" Type="varchar" MaxLength="50" />
+          <Property Name="F_Type" Type="varchar" MaxLength="50" />
+          <Property Name="F_IPAddress" Type="varchar" MaxLength="50" />
+          <Property Name="F_IPAddressName" Type="varchar" MaxLength="50" />
+          <Property Name="F_ModuleId" Type="varchar" MaxLength="50" />
+          <Property Name="F_ModuleName" Type="varchar" MaxLength="50" />
+          <Property Name="F_Result" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sys_Module">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+          <Property Name="F_Layers" Type="int" />
+          <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+          <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+          <Property Name="F_Icon" Type="varchar" MaxLength="50" />
+          <Property Name="F_UrlAddress" Type="varchar" MaxLength="500" />
+          <Property Name="F_Target" Type="varchar" MaxLength="50" />
+          <Property Name="F_IsMenu" Type="bit" />
+          <Property Name="F_IsExpand" Type="bit" />
+          <Property Name="F_IsPublic" Type="bit" />
+          <Property Name="F_AllowEdit" Type="bit" />
+          <Property Name="F_AllowDelete" Type="bit" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sys_ModuleButton">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_ModuleId" Type="varchar" MaxLength="50" />
+          <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+          <Property Name="F_Layers" Type="int" />
+          <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+          <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+          <Property Name="F_Icon" Type="varchar" MaxLength="50" />
+          <Property Name="F_Location" Type="int" />
+          <Property Name="F_JsEvent" Type="varchar" MaxLength="50" />
+          <Property Name="F_UrlAddress" Type="varchar" MaxLength="500" />
+          <Property Name="F_Split" Type="bit" />
+          <Property Name="F_IsPublic" Type="bit" />
+          <Property Name="F_AllowEdit" Type="bit" />
+          <Property Name="F_AllowDelete" Type="bit" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sys_ModuleForm">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_ModuleId" Type="varchar" MaxLength="50" />
+          <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+          <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+          <Property Name="F_FormJson" Type="varchar(max)" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Sys_ModuleFormInstance">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_FormId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_ObjectId" Type="varchar" MaxLength="50" />
+          <Property Name="F_InstanceJson" Type="varchar(max)" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sys_Organize">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_ParentId" Type="varchar" MaxLength="50" />
+          <Property Name="F_Layers" Type="int" />
+          <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+          <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+          <Property Name="F_ShortName" Type="varchar" MaxLength="50" />
+          <Property Name="F_CategoryId" Type="varchar" MaxLength="50" />
+          <Property Name="F_ManagerId" Type="varchar" MaxLength="50" />
+          <Property Name="F_TelePhone" Type="varchar" MaxLength="20" />
+          <Property Name="F_MobilePhone" Type="varchar" MaxLength="20" />
+          <Property Name="F_WeChat" Type="varchar" MaxLength="50" />
+          <Property Name="F_Fax" Type="varchar" MaxLength="20" />
+          <Property Name="F_Email" Type="varchar" MaxLength="50" />
+          <Property Name="F_AreaId" Type="varchar" MaxLength="50" />
+          <Property Name="F_Address" Type="varchar" MaxLength="500" />
+          <Property Name="F_AllowEdit" Type="bit" />
+          <Property Name="F_AllowDelete" Type="bit" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Sys_Role">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_OrganizeId" Type="varchar" MaxLength="50" />
+          <Property Name="F_Category" Type="int" />
+          <Property Name="F_EnCode" Type="varchar" MaxLength="50" />
+          <Property Name="F_FullName" Type="varchar" MaxLength="50" />
+          <Property Name="F_Type" Type="varchar" MaxLength="50" />
+          <Property Name="F_AllowEdit" Type="bit" />
+          <Property Name="F_AllowDelete" Type="bit" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Sys_RoleAuthorize">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_ItemType" Type="int" />
+          <Property Name="F_ItemId" Type="varchar" MaxLength="50" />
+          <Property Name="F_ObjectType" Type="int" />
+          <Property Name="F_ObjectId" Type="varchar" MaxLength="50" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sys_Text">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="F_Remark" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Sys_User">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_Account" Type="varchar" MaxLength="50" />
+          <Property Name="F_RealName" Type="varchar" MaxLength="50" />
+          <Property Name="F_NickName" Type="varchar" MaxLength="50" />
+          <Property Name="F_HeadIcon" Type="varchar" MaxLength="50" />
+          <Property Name="F_Gender" Type="bit" />
+          <Property Name="F_Birthday" Type="datetime" />
+          <Property Name="F_MobilePhone" Type="varchar" MaxLength="20" />
+          <Property Name="F_Email" Type="varchar" MaxLength="50" />
+          <Property Name="F_WeChat" Type="varchar" MaxLength="50" />
+          <Property Name="F_ManagerId" Type="varchar" MaxLength="50" />
+          <Property Name="F_SecurityLevel" Type="int" />
+          <Property Name="F_Signature" Type="varchar" MaxLength="500" />
+          <Property Name="F_OrganizeId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DepartmentId" Type="varchar" MaxLength="500" />
+          <Property Name="F_RoleId" Type="varchar" MaxLength="500" />
+          <Property Name="F_DutyId" Type="varchar" MaxLength="500" />
+          <Property Name="F_IsAdministrator" Type="bit" />
+          <Property Name="F_SortCode" Type="int" />
+          <Property Name="F_DeleteMark" Type="bit" />
+          <Property Name="F_EnabledMark" Type="bit" />
+          <Property Name="F_Description" Type="varchar" MaxLength="500" />
+          <Property Name="F_CreatorTime" Type="datetime" />
+          <Property Name="F_CreatorUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_LastModifyTime" Type="datetime" />
+          <Property Name="F_LastModifyUserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_DeleteTime" Type="datetime" />
+          <Property Name="F_DeleteUserId" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Sys_UserLogOn">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="F_UserId" Type="varchar" MaxLength="50" />
+          <Property Name="F_UserPassword" Type="varchar" MaxLength="50" />
+          <Property Name="F_UserSecretkey" Type="varchar" MaxLength="50" />
+          <Property Name="F_AllowStartTime" Type="datetime" />
+          <Property Name="F_AllowEndTime" Type="datetime" />
+          <Property Name="F_LockStartDate" Type="datetime" />
+          <Property Name="F_LockEndDate" Type="datetime" />
+          <Property Name="F_FirstVisitTime" Type="datetime" />
+          <Property Name="F_PreviousVisitTime" Type="datetime" />
+          <Property Name="F_LastVisitTime" Type="datetime" />
+          <Property Name="F_ChangePasswordDate" Type="datetime" />
+          <Property Name="F_MultiUserLogin" Type="bit" />
+          <Property Name="F_LogOnCount" Type="int" />
+          <Property Name="F_UserOnLine" Type="bit" />
+          <Property Name="F_Question" Type="varchar" MaxLength="50" />
+          <Property Name="F_AnswerQuestion" Type="varchar" MaxLength="500" />
+          <Property Name="F_CheckIPAddress" Type="bit" />
+          <Property Name="F_Language" Type="varchar" MaxLength="50" />
+          <Property Name="F_Theme" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityContainer Name="NFineBaseModelStoreContainer">
+          <EntitySet Name="Sys_Area" EntityType="Self.Sys_Area" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_DbBackup" EntityType="Self.Sys_DbBackup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_FilterIP" EntityType="Self.Sys_FilterIP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Items" EntityType="Self.Sys_Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_ItemsDetail" EntityType="Self.Sys_ItemsDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Log" EntityType="Self.Sys_Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Module" EntityType="Self.Sys_Module" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_ModuleButton" EntityType="Self.Sys_ModuleButton" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_ModuleForm" EntityType="Self.Sys_ModuleForm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_ModuleFormInstance" EntityType="Self.Sys_ModuleFormInstance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Organize" EntityType="Self.Sys_Organize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Role" EntityType="Self.Sys_Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_RoleAuthorize" EntityType="Self.Sys_RoleAuthorize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_Text" EntityType="Self.Sys_Text" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_User" EntityType="Self.Sys_User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sys_UserLogOn" EntityType="Self.Sys_UserLogOn" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NFineBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Sys_Area">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Layers" Type="Int32" />
+          <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_SimpleSpelling" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_DbBackup">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_BackupType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DbName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FileSize" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_BackupTime" Type="DateTime" Precision="3" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_FilterIP">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_Type" Type="Boolean" />
+          <Property Name="F_StartIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_EndIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_Items">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_IsTree" Type="Boolean" />
+          <Property Name="F_Layers" Type="Int32" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_ItemsDetail">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_ItemId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_ItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_SimpleSpelling" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_IsDefault" Type="Boolean" />
+          <Property Name="F_Layers" Type="Int32" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_Log">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_Date" Type="DateTime" Precision="3" />
+          <Property Name="F_Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_IPAddressName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_ModuleId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_ModuleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Result" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_Module">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Layers" Type="Int32" />
+          <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_UrlAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_Target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_IsMenu" Type="Boolean" />
+          <Property Name="F_IsExpand" Type="Boolean" />
+          <Property Name="F_IsPublic" Type="Boolean" />
+          <Property Name="F_AllowEdit" Type="Boolean" />
+          <Property Name="F_AllowDelete" Type="Boolean" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_ModuleButton">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_ModuleId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Layers" Type="Int32" />
+          <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Location" Type="Int32" />
+          <Property Name="F_JsEvent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_UrlAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_Split" Type="Boolean" />
+          <Property Name="F_IsPublic" Type="Boolean" />
+          <Property Name="F_AllowEdit" Type="Boolean" />
+          <Property Name="F_AllowDelete" Type="Boolean" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_ModuleForm">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_ModuleId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FormJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_ModuleFormInstance">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_FormId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_ObjectId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_InstanceJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_Organize">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Layers" Type="Int32" />
+          <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_ShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_CategoryId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_ManagerId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_TelePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="F_MobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="F_WeChat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="F_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_AreaId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_AllowEdit" Type="Boolean" />
+          <Property Name="F_AllowDelete" Type="Boolean" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_Role">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_OrganizeId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Category" Type="Int32" />
+          <Property Name="F_EnCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_AllowEdit" Type="Boolean" />
+          <Property Name="F_AllowDelete" Type="Boolean" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_RoleAuthorize">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_ItemType" Type="Int32" />
+          <Property Name="F_ItemId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_ObjectType" Type="Int32" />
+          <Property Name="F_ObjectId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_Text">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="F_Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Sys_User">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_HeadIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Gender" Type="Boolean" />
+          <Property Name="F_Birthday" Type="DateTime" Precision="3" />
+          <Property Name="F_MobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="F_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_WeChat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_ManagerId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_SecurityLevel" Type="Int32" />
+          <Property Name="F_Signature" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_OrganizeId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DepartmentId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_RoleId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_DutyId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_IsAdministrator" Type="Boolean" />
+          <Property Name="F_SortCode" Type="Int32" />
+          <Property Name="F_DeleteMark" Type="Boolean" />
+          <Property Name="F_EnabledMark" Type="Boolean" />
+          <Property Name="F_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CreatorTime" Type="DateTime" Precision="3" />
+          <Property Name="F_CreatorUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_LastModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastModifyUserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_DeleteTime" Type="DateTime" Precision="3" />
+          <Property Name="F_DeleteUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sys_UserLogOn">
+          <Key>
+            <PropertyRef Name="F_Id" />
+          </Key>
+          <Property Name="F_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="F_UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_UserSecretkey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_AllowStartTime" Type="DateTime" Precision="3" />
+          <Property Name="F_AllowEndTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LockStartDate" Type="DateTime" Precision="3" />
+          <Property Name="F_LockEndDate" Type="DateTime" Precision="3" />
+          <Property Name="F_FirstVisitTime" Type="DateTime" Precision="3" />
+          <Property Name="F_PreviousVisitTime" Type="DateTime" Precision="3" />
+          <Property Name="F_LastVisitTime" Type="DateTime" Precision="3" />
+          <Property Name="F_ChangePasswordDate" Type="DateTime" Precision="3" />
+          <Property Name="F_MultiUserLogin" Type="Boolean" />
+          <Property Name="F_LogOnCount" Type="Int32" />
+          <Property Name="F_UserOnLine" Type="Boolean" />
+          <Property Name="F_Question" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_AnswerQuestion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="F_CheckIPAddress" Type="Boolean" />
+          <Property Name="F_Language" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F_Theme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="NFineBaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Sys_Area" EntityType="Self.Sys_Area" />
+          <EntitySet Name="Sys_DbBackup" EntityType="Self.Sys_DbBackup" />
+          <EntitySet Name="Sys_FilterIP" EntityType="Self.Sys_FilterIP" />
+          <EntitySet Name="Sys_Items" EntityType="Self.Sys_Items" />
+          <EntitySet Name="Sys_ItemsDetail" EntityType="Self.Sys_ItemsDetail" />
+          <EntitySet Name="Sys_Log" EntityType="Self.Sys_Log" />
+          <EntitySet Name="Sys_Module" EntityType="Self.Sys_Module" />
+          <EntitySet Name="Sys_ModuleButton" EntityType="Self.Sys_ModuleButton" />
+          <EntitySet Name="Sys_ModuleForm" EntityType="Self.Sys_ModuleForm" />
+          <EntitySet Name="Sys_ModuleFormInstance" EntityType="Self.Sys_ModuleFormInstance" />
+          <EntitySet Name="Sys_Organize" EntityType="Self.Sys_Organize" />
+          <EntitySet Name="Sys_Role" EntityType="Self.Sys_Role" />
+          <EntitySet Name="Sys_RoleAuthorize" EntityType="Self.Sys_RoleAuthorize" />
+          <EntitySet Name="Sys_Text" EntityType="Self.Sys_Text" />
+          <EntitySet Name="Sys_User" EntityType="Self.Sys_User" />
+          <EntitySet Name="Sys_UserLogOn" EntityType="Self.Sys_UserLogOn" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NFineBaseModelStoreContainer" CdmEntityContainer="NFineBaseEntities">
+          <EntitySetMapping Name="Sys_Area">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_Area">
+              <MappingFragment StoreEntitySet="Sys_Area">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+                <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+                <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+                <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+                <ScalarProperty Name="F_SimpleSpelling" ColumnName="F_SimpleSpelling" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_DbBackup">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_DbBackup">
+              <MappingFragment StoreEntitySet="Sys_DbBackup">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_BackupType" ColumnName="F_BackupType" />
+                <ScalarProperty Name="F_DbName" ColumnName="F_DbName" />
+                <ScalarProperty Name="F_FileName" ColumnName="F_FileName" />
+                <ScalarProperty Name="F_FileSize" ColumnName="F_FileSize" />
+                <ScalarProperty Name="F_FilePath" ColumnName="F_FilePath" />
+                <ScalarProperty Name="F_BackupTime" ColumnName="F_BackupTime" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_FilterIP">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_FilterIP">
+              <MappingFragment StoreEntitySet="Sys_FilterIP">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_Type" ColumnName="F_Type" />
+                <ScalarProperty Name="F_StartIP" ColumnName="F_StartIP" />
+                <ScalarProperty Name="F_EndIP" ColumnName="F_EndIP" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Items">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_Items">
+              <MappingFragment StoreEntitySet="Sys_Items">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+                <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+                <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+                <ScalarProperty Name="F_IsTree" ColumnName="F_IsTree" />
+                <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_ItemsDetail">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_ItemsDetail">
+              <MappingFragment StoreEntitySet="Sys_ItemsDetail">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_ItemId" ColumnName="F_ItemId" />
+                <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+                <ScalarProperty Name="F_ItemCode" ColumnName="F_ItemCode" />
+                <ScalarProperty Name="F_ItemName" ColumnName="F_ItemName" />
+                <ScalarProperty Name="F_SimpleSpelling" ColumnName="F_SimpleSpelling" />
+                <ScalarProperty Name="F_IsDefault" ColumnName="F_IsDefault" />
+                <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Log">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_Log">
+              <MappingFragment StoreEntitySet="Sys_Log">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_Date" ColumnName="F_Date" />
+                <ScalarProperty Name="F_Account" ColumnName="F_Account" />
+                <ScalarProperty Name="F_NickName" ColumnName="F_NickName" />
+                <ScalarProperty Name="F_Type" ColumnName="F_Type" />
+                <ScalarProperty Name="F_IPAddress" ColumnName="F_IPAddress" />
+                <ScalarProperty Name="F_IPAddressName" ColumnName="F_IPAddressName" />
+                <ScalarProperty Name="F_ModuleId" ColumnName="F_ModuleId" />
+                <ScalarProperty Name="F_ModuleName" ColumnName="F_ModuleName" />
+                <ScalarProperty Name="F_Result" ColumnName="F_Result" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Module">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_Module">
+              <MappingFragment StoreEntitySet="Sys_Module">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+                <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+                <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+                <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+                <ScalarProperty Name="F_Icon" ColumnName="F_Icon" />
+                <ScalarProperty Name="F_UrlAddress" ColumnName="F_UrlAddress" />
+                <ScalarProperty Name="F_Target" ColumnName="F_Target" />
+                <ScalarProperty Name="F_IsMenu" ColumnName="F_IsMenu" />
+                <ScalarProperty Name="F_IsExpand" ColumnName="F_IsExpand" />
+                <ScalarProperty Name="F_IsPublic" ColumnName="F_IsPublic" />
+                <ScalarProperty Name="F_AllowEdit" ColumnName="F_AllowEdit" />
+                <ScalarProperty Name="F_AllowDelete" ColumnName="F_AllowDelete" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_ModuleButton">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_ModuleButton">
+              <MappingFragment StoreEntitySet="Sys_ModuleButton">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_ModuleId" ColumnName="F_ModuleId" />
+                <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+                <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+                <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+                <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+                <ScalarProperty Name="F_Icon" ColumnName="F_Icon" />
+                <ScalarProperty Name="F_Location" ColumnName="F_Location" />
+                <ScalarProperty Name="F_JsEvent" ColumnName="F_JsEvent" />
+                <ScalarProperty Name="F_UrlAddress" ColumnName="F_UrlAddress" />
+                <ScalarProperty Name="F_Split" ColumnName="F_Split" />
+                <ScalarProperty Name="F_IsPublic" ColumnName="F_IsPublic" />
+                <ScalarProperty Name="F_AllowEdit" ColumnName="F_AllowEdit" />
+                <ScalarProperty Name="F_AllowDelete" ColumnName="F_AllowDelete" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_ModuleForm">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_ModuleForm">
+              <MappingFragment StoreEntitySet="Sys_ModuleForm">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_ModuleId" ColumnName="F_ModuleId" />
+                <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+                <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+                <ScalarProperty Name="F_FormJson" ColumnName="F_FormJson" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_ModuleFormInstance">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_ModuleFormInstance">
+              <MappingFragment StoreEntitySet="Sys_ModuleFormInstance">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_FormId" ColumnName="F_FormId" />
+                <ScalarProperty Name="F_ObjectId" ColumnName="F_ObjectId" />
+                <ScalarProperty Name="F_InstanceJson" ColumnName="F_InstanceJson" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Organize">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_Organize">
+              <MappingFragment StoreEntitySet="Sys_Organize">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_ParentId" ColumnName="F_ParentId" />
+                <ScalarProperty Name="F_Layers" ColumnName="F_Layers" />
+                <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+                <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+                <ScalarProperty Name="F_ShortName" ColumnName="F_ShortName" />
+                <ScalarProperty Name="F_CategoryId" ColumnName="F_CategoryId" />
+                <ScalarProperty Name="F_ManagerId" ColumnName="F_ManagerId" />
+                <ScalarProperty Name="F_TelePhone" ColumnName="F_TelePhone" />
+                <ScalarProperty Name="F_MobilePhone" ColumnName="F_MobilePhone" />
+                <ScalarProperty Name="F_WeChat" ColumnName="F_WeChat" />
+                <ScalarProperty Name="F_Fax" ColumnName="F_Fax" />
+                <ScalarProperty Name="F_Email" ColumnName="F_Email" />
+                <ScalarProperty Name="F_AreaId" ColumnName="F_AreaId" />
+                <ScalarProperty Name="F_Address" ColumnName="F_Address" />
+                <ScalarProperty Name="F_AllowEdit" ColumnName="F_AllowEdit" />
+                <ScalarProperty Name="F_AllowDelete" ColumnName="F_AllowDelete" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Role">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_Role">
+              <MappingFragment StoreEntitySet="Sys_Role">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_OrganizeId" ColumnName="F_OrganizeId" />
+                <ScalarProperty Name="F_Category" ColumnName="F_Category" />
+                <ScalarProperty Name="F_EnCode" ColumnName="F_EnCode" />
+                <ScalarProperty Name="F_FullName" ColumnName="F_FullName" />
+                <ScalarProperty Name="F_Type" ColumnName="F_Type" />
+                <ScalarProperty Name="F_AllowEdit" ColumnName="F_AllowEdit" />
+                <ScalarProperty Name="F_AllowDelete" ColumnName="F_AllowDelete" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_RoleAuthorize">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_RoleAuthorize">
+              <MappingFragment StoreEntitySet="Sys_RoleAuthorize">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_ItemType" ColumnName="F_ItemType" />
+                <ScalarProperty Name="F_ItemId" ColumnName="F_ItemId" />
+                <ScalarProperty Name="F_ObjectType" ColumnName="F_ObjectType" />
+                <ScalarProperty Name="F_ObjectId" ColumnName="F_ObjectId" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_Text">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_Text">
+              <MappingFragment StoreEntitySet="Sys_Text">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_Name" ColumnName="F_Name" />
+                <ScalarProperty Name="F_Remark" ColumnName="F_Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_User">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_User">
+              <MappingFragment StoreEntitySet="Sys_User">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_Account" ColumnName="F_Account" />
+                <ScalarProperty Name="F_RealName" ColumnName="F_RealName" />
+                <ScalarProperty Name="F_NickName" ColumnName="F_NickName" />
+                <ScalarProperty Name="F_HeadIcon" ColumnName="F_HeadIcon" />
+                <ScalarProperty Name="F_Gender" ColumnName="F_Gender" />
+                <ScalarProperty Name="F_Birthday" ColumnName="F_Birthday" />
+                <ScalarProperty Name="F_MobilePhone" ColumnName="F_MobilePhone" />
+                <ScalarProperty Name="F_Email" ColumnName="F_Email" />
+                <ScalarProperty Name="F_WeChat" ColumnName="F_WeChat" />
+                <ScalarProperty Name="F_ManagerId" ColumnName="F_ManagerId" />
+                <ScalarProperty Name="F_SecurityLevel" ColumnName="F_SecurityLevel" />
+                <ScalarProperty Name="F_Signature" ColumnName="F_Signature" />
+                <ScalarProperty Name="F_OrganizeId" ColumnName="F_OrganizeId" />
+                <ScalarProperty Name="F_DepartmentId" ColumnName="F_DepartmentId" />
+                <ScalarProperty Name="F_RoleId" ColumnName="F_RoleId" />
+                <ScalarProperty Name="F_DutyId" ColumnName="F_DutyId" />
+                <ScalarProperty Name="F_IsAdministrator" ColumnName="F_IsAdministrator" />
+                <ScalarProperty Name="F_SortCode" ColumnName="F_SortCode" />
+                <ScalarProperty Name="F_DeleteMark" ColumnName="F_DeleteMark" />
+                <ScalarProperty Name="F_EnabledMark" ColumnName="F_EnabledMark" />
+                <ScalarProperty Name="F_Description" ColumnName="F_Description" />
+                <ScalarProperty Name="F_CreatorTime" ColumnName="F_CreatorTime" />
+                <ScalarProperty Name="F_CreatorUserId" ColumnName="F_CreatorUserId" />
+                <ScalarProperty Name="F_LastModifyTime" ColumnName="F_LastModifyTime" />
+                <ScalarProperty Name="F_LastModifyUserId" ColumnName="F_LastModifyUserId" />
+                <ScalarProperty Name="F_DeleteTime" ColumnName="F_DeleteTime" />
+                <ScalarProperty Name="F_DeleteUserId" ColumnName="F_DeleteUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sys_UserLogOn">
+            <EntityTypeMapping TypeName="NFineBaseModel.Sys_UserLogOn">
+              <MappingFragment StoreEntitySet="Sys_UserLogOn">
+                <ScalarProperty Name="F_Id" ColumnName="F_Id" />
+                <ScalarProperty Name="F_UserId" ColumnName="F_UserId" />
+                <ScalarProperty Name="F_UserPassword" ColumnName="F_UserPassword" />
+                <ScalarProperty Name="F_UserSecretkey" ColumnName="F_UserSecretkey" />
+                <ScalarProperty Name="F_AllowStartTime" ColumnName="F_AllowStartTime" />
+                <ScalarProperty Name="F_AllowEndTime" ColumnName="F_AllowEndTime" />
+                <ScalarProperty Name="F_LockStartDate" ColumnName="F_LockStartDate" />
+                <ScalarProperty Name="F_LockEndDate" ColumnName="F_LockEndDate" />
+                <ScalarProperty Name="F_FirstVisitTime" ColumnName="F_FirstVisitTime" />
+                <ScalarProperty Name="F_PreviousVisitTime" ColumnName="F_PreviousVisitTime" />
+                <ScalarProperty Name="F_LastVisitTime" ColumnName="F_LastVisitTime" />
+                <ScalarProperty Name="F_ChangePasswordDate" ColumnName="F_ChangePasswordDate" />
+                <ScalarProperty Name="F_MultiUserLogin" ColumnName="F_MultiUserLogin" />
+                <ScalarProperty Name="F_LogOnCount" ColumnName="F_LogOnCount" />
+                <ScalarProperty Name="F_UserOnLine" ColumnName="F_UserOnLine" />
+                <ScalarProperty Name="F_Question" ColumnName="F_Question" />
+                <ScalarProperty Name="F_AnswerQuestion" ColumnName="F_AnswerQuestion" />
+                <ScalarProperty Name="F_CheckIPAddress" ColumnName="F_CheckIPAddress" />
+                <ScalarProperty Name="F_Language" ColumnName="F_Language" />
+                <ScalarProperty Name="F_Theme" ColumnName="F_Theme" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="NFineBaseModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

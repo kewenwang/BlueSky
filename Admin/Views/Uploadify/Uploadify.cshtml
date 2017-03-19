@@ -1,0 +1,56 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <!--uploadity上传图片插件-->
+    <script type="text/javascript" src="~/fonts/jquery/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/fonts/jquery/uploadify/jquery.uploadify.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/fonts/jquery/uploadify/uploadify.css" />
+
+</head>
+<body>
+    <input type="file" name="uploadify" id="uploadify" />
+    <img src="" id="fileimg" />
+
+    <br />
+
+    <a id="download">下载</a>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    //上传
+    $("#uploadify").uploadify({
+        'swf': 'http://localhost:62585/fonts/jquery/uploadify/uploadify.swf',
+        'uploader': '/Uploadify/UpFile',
+        'onUploadSuccess': function (file, data, response) {
+            var s = data;
+            console.log(data);
+
+            var filepath = $("#Filepath").val();
+            var filepaths = filepath + ";" + data;                  //每次文件上传成功后以分号拼接图片路径
+            if (filepath.trim() == "") {                            //如果只有一个图片不用分号
+                filepaths = data;
+            }
+            $("#Filepath").val(filepaths);
+            $("#fileimg").attr("src", filepaths.split(";")[0]);
+        }
+    })
+
+
+    //下载
+    $("#download").click(function () {
+
+        location.href = "@Url.Action("Download", "Uploadify")";
+    })
+
+</script>
+
+
+

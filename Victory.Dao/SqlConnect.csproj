@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{224E427F-8AFC-476A-8AE0-A1F2040F8858}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Victory.Dao</RootNamespace>
+    <AssemblyName>Victory.Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\BaseDataHelper.cs" />
+    <Compile Include="DataAccess\DataAccessSession.cs" />
+    <Compile Include="DataAccess\DataHelperFactory.cs" />
+    <Compile Include="DataAccess\IDataAccessSession.cs" />
+    <Compile Include="DataAccess\IDataHelper.cs" />
+    <Compile Include="DataAccess\IDataProviderFactory.cs" />
+    <Compile Include="DataAccess\OdbcHelper\OdbcHelper.cs" />
+    <Compile Include="DataAccess\OleDbHelper\OleDbHelper.cs" />
+    <Compile Include="DataAccess\SqlServerHelper\SqlServerAnalysis.cs" />
+    <Compile Include="DataAccess\SqlServerHelper\SqlServerHelper.cs" />
+    <Compile Include="DataMapper\Config\DaoConfig.cs" />
+    <Compile Include="DataMapper\Config\DaoConfigProvider.cs" />
+    <Compile Include="DataMapper\Config\Sql.cs" />
+    <Compile Include="DataMapper\DaoException.cs" />
+    <Compile Include="DataMapper\DataMapperProvider.cs" />
+    <Compile Include="DataMapper\IDataMapper.cs" />
+    <Compile Include="DataMapper\DataMapper.cs" />
+    <Compile Include="DataMapper\Config\SqlResource.cs" />
+    <Compile Include="DataMapper\ExecuteUnit.cs" />
+    <Compile Include="DataMapper\StatementCondition.cs" />
+    <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\CollectionChangeDelegate.cs" />
+    <Compile Include="Model\CollectionChangeType.cs" />
+    <Compile Include="Model\IModel.cs" />
+    <Compile Include="Model\IModelCollection.cs" />
+    <Compile Include="Model\IPagerModelCollection.cs" />
+    <Compile Include="Model\ModelCollection.cs" />
+    <Compile Include="Model\PagerModelCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
