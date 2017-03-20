@@ -13,7 +13,6 @@ namespace Admin.Controllers
         public ActionResult Index()
         {
             AppLog.Error("这是第一个日志");
-
             return View();
         }
     }
