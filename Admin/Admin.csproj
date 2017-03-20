@@ -213,9 +213,6 @@
     <Content Include="Views\Redis\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\MSMQ\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
