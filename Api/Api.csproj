@@ -162,6 +162,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Common\ApiAttribute.cs" />
     <Compile Include="App_Common\ApiHelper.cs" />
     <Compile Include="App_Common\OperationResult.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />

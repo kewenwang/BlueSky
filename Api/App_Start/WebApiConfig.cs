@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
-using Newtonsoft.Json.Serialization;
+using Api.App_Common;
 
 namespace Api
 {
@@ -12,8 +12,8 @@ namespace Api
         public static void Register(HttpConfiguration config)
         {
             // Web API 配置和服务
-            // 将 Web API 配置为仅使用不记名令牌身份验证。
-            //config.SuppressDefaultHostAuthentication();
+
+            config.Filters.Add(new ApiAttribute());
 
             // Web API 路由
             config.MapHttpAttributeRoutes();
