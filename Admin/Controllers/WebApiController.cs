@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
-using Common;
 
 namespace Admin.Controllers
 {
-    public class Log4netController : Controller
+    public class WebApiController : Controller
     {
-        // GET: Log4net
+        // GET: WebApi
         public ActionResult Index()
         {
-            AppLog.Error("这是第一个日志");
             return View();
         }
     }

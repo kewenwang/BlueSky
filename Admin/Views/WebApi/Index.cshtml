@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <a id="save">测试API</a>
+    </div>
+</body>
+</html>
+<script src="~/fonts/jquery/jquery/jquery-1.10.2.min.js"></script>
+
+<script type="text/javascript">
+
+    $("#save").click(function () {
+
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            url: "http://localhost:15771/Home/GetNewsByID?ID=1",
+            data: {},
+            success: function (data) {
+                console.log(data);
+            },
+            headers: { "Accept": "Token" }
+        })
+
+        //$.ajax({
+        //    type: "post",
+        //    dataType: "json",
+        //    url: "http://localhost:15771/Home/PostNews",
+        //    data: {id:1,Title:"王科文"},
+        //    success: function (data) {
+        //        console.log(data);
+        //    }
+        //})
+
+    })
+</script>

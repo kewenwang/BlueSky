@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model_EF", "Model_EF\Model_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlConnect", "Victory.Dao\SqlConnect.csproj", "{224E427F-8AFC-476A-8AE0-A1F2040F8858}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{079868FC-D0B6-44E3-BA51-D843E5AAFEED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{224E427F-8AFC-476A-8AE0-A1F2040F8858}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{224E427F-8AFC-476A-8AE0-A1F2040F8858}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{224E427F-8AFC-476A-8AE0-A1F2040F8858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{079868FC-D0B6-44E3-BA51-D843E5AAFEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079868FC-D0B6-44E3-BA51-D843E5AAFEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079868FC-D0B6-44E3-BA51-D843E5AAFEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079868FC-D0B6-44E3-BA51-D843E5AAFEED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
