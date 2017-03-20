@@ -28,7 +28,7 @@ namespace Api.Controllers
         /// <param name="ID"></param>
         /// <returns></returns>
         [HttpGet]
-        public HttpResponseMessage GetNewsByID(int id)
+        public HttpResponseMessage GetNewsByID(int id,int a,int b)
         {
             var news = new NewsRepository().GetAllNews().Where((p) => p.Id == id);
             return ApiHelper.CreateBackMessage(news);

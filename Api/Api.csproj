@@ -172,6 +172,7 @@
     </Compile>
     <Compile Include="Models\User\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App_Common\ValidateAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

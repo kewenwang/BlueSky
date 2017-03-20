@@ -10,7 +10,10 @@ namespace Api.App_Common
 {
     public class ApiAttribute: ActionFilterAttribute
     {
-
+        /// <summary>
+        /// Token
+        /// </summary>
+        /// <param name="actionContext"></param>
         public override void OnActionExecuting(HttpActionContext actionContext)
         {   
             string token = GetRequestHeaderValue(actionContext.Request, "Accept");
@@ -28,7 +31,6 @@ namespace Api.App_Common
             {
                 return values.First();
             }
-
             return null;
         }
     }
