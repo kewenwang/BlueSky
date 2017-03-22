@@ -5,12 +5,8 @@ using System.Linq;
 using System.Web;
 
 namespace Admin
-{
-    public class App_Common
-    {
-
-    }
-
+{   
+    //接口调用
     public interface IData
     {
         void write();

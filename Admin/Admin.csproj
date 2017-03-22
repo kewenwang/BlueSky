@@ -44,17 +44,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ServiceStack.Common">
-      <HintPath>C:\Users\wowo\Desktop\Redis\ServiceStack.Common.dll</HintPath>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Quartz\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Interfaces">
-      <HintPath>C:\Users\wowo\Desktop\Redis\ServiceStack.Interfaces.dll</HintPath>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz\Quartz.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Redis">
-      <HintPath>C:\Users\wowo\Desktop\Redis\ServiceStack.Redis.dll</HintPath>
+    <Reference Include="ServiceStack.Common, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Redis\ServiceStack.Common.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Text">
-      <HintPath>C:\Users\wowo\Desktop\Redis\ServiceStack.Text.dll</HintPath>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Redis\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Redis\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Redis\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -150,6 +160,7 @@
     <Compile Include="Controllers\MSMQController.cs" />
     <Compile Include="Controllers\RedisController.cs" />
     <Compile Include="Controllers\ReflexController.cs" />
+    <Compile Include="Controllers\TaskSchedulingController.cs" />
     <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Controllers\UploadifyController.cs" />
     <Compile Include="Controllers\WebApiController.cs" />
@@ -229,6 +240,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Thread\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TaskScheduling\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
