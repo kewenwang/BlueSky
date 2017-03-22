@@ -9,8 +9,14 @@ namespace Admin.Controllers
         // GET: Log4net
         public ActionResult Index()
         {
-            AppLog.Error("这是第一个日志");
+            test();
+
             return View();
+        }
+
+        public void test()
+        {
+            AppLog.Error("这是第一个日志");
         }
     }
 }

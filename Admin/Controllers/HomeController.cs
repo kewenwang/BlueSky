@@ -7,24 +7,36 @@ using System.Web;
 using System.Web.Mvc;
 using Dal;
 using SqlConnect;
+using Newtonsoft.Json;
 
 namespace Admin.Controllers
 {
     public class HomeController : Controller
     {
 
-        #region EF
-        //NFineBaseEntities db = new NFineBaseEntities(); => EF
-        //var obj = db.Sys_Area.ToList();  => EF
-        #endregion
-
         public ActionResult Index()
-        {   
-            int id = UserDal.UpdateCustom();
+        {
+            Ado();
 
-            string aa = "";
+            //Ef();
 
             return View();
         }
+
+        #region Ado
+        public void Ado()
+        {
+            int id = UserDal.UpdateCustom();
+        }
+        #endregion
+
+        #region EF
+        public void Ef()
+        {
+            NFineBaseEntities db = new NFineBaseEntities();
+            var obj = db.Sys_Area.ToList();
+        }
+        #endregion
+
     }
 }

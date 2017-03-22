@@ -10,7 +10,10 @@ namespace Admin.Controllers
     {
         // GET: WebApi
         public ActionResult Index()
-        {
+        {   
+
+            //相关调用在页面!
+
             return View();
         }
     }

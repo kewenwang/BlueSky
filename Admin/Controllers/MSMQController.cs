@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Messaging;
 using System.ServiceModel.Dispatcher;
 using System.Threading;
+using Common;
 
 namespace Admin.Controllers
 {
@@ -14,14 +15,13 @@ namespace Admin.Controllers
         // GET: MSMQ
         public ActionResult Index()
         {
-            Msmq();
-            msmq_index();
+            test();
+            test2();
             return View();
         }
 
-
-        //消息队列 => 基本创建 接受 处理
-        public void Msmq()
+        #region 消息队列 => 基本创建 接受 处理
+        public void test()
         {
 
             MessageQueue messageQueue = null;
@@ -49,9 +49,10 @@ namespace Admin.Controllers
             //messageQueue.Purge();
         }
 
+        #endregion
 
-
-        public void msmq_index()
+        #region 消息队列 => 基本创建 接受 异步处理
+        public void test2()
         {
             string msg = ".\\Private$\\WANGKEWEN";
             MessageQueue messageQueue = null;
@@ -95,7 +96,7 @@ namespace Admin.Controllers
                         var m = queue.Receive();//先进先出顺序，取出第一条数据并删除。
                         if (m != null && !string.IsNullOrEmpty(m.Body.ToString()))
                         {
-                            list.Add(m.Body.ToString());
+                            AppLog.Error(m.Body.ToString());
                         }
                         else
                         {
@@ -107,5 +108,6 @@ namespace Admin.Controllers
             }
 
         }
+        #endregion
     }
 }

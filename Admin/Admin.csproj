@@ -140,12 +140,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Common\Interface.cs" />
+    <Compile Include="App_Common\RequestApi.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InterfaceController.cs" />
     <Compile Include="Controllers\Log4netController.cs" />
     <Compile Include="Controllers\MSMQController.cs" />
     <Compile Include="Controllers\RedisController.cs" />
+    <Compile Include="Controllers\ReflexController.cs" />
+    <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Controllers\UploadifyController.cs" />
     <Compile Include="Controllers\WebApiController.cs" />
     <Compile Include="Global.asax.cs">
@@ -215,6 +220,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\WebApi\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Interface\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Reflex\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Thread\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
